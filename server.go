@@ -12,14 +12,14 @@ func main(){
 		w.Header().Set("Content-Type", "application/json")
 
 		data := make(map[string]string)
-		data["message"] = "Endpoint hit!"
+		data["message"] = "Endpoint hit! (Go)"
 
 		json.NewEncoder(w).Encode(data)
 		
 	})
 
-	fmt.Printf("Starting server at port 8080\n")
-	err := http.ListenAndServe(":8080", nil)
+	fmt.Printf("Starting server at port 8000\n")
+	err := http.ListenAndServe(":8000", nil)
 	if (err != nil){
 		log.Fatal(err)
 	}
